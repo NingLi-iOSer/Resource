@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		275F24D322D9D15800FBB718 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 275F24D222D9D15800FBB718 /* animation.json */; };
+		276EDCB6229BB29A00EAA47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EDCB5229BB29A00EAA47F /* AppDelegate.swift */; };
+		276EDCB8229BB29A00EAA47F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EDCB7229BB29A00EAA47F /* ViewController.swift */; };
+		276EDCBB229BB29A00EAA47F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276EDCB9229BB29A00EAA47F /* Main.storyboard */; };
+		276EDCBD229BB29C00EAA47F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276EDCBC229BB29C00EAA47F /* Assets.xcassets */; };
+		276EDCC0229BB29C00EAA47F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276EDCBE229BB29C00EAA47F /* LaunchScreen.storyboard */; };
+		27E9615722D8301600F773FC /* 7655-rocket.json in Resources */ = {isa = PBXBuildFile; fileRef = 27E9615622D8301500F773FC /* 7655-rocket.json */; };
+		CA5430CC647D721C8183C56D /* Pods_Airbnb_lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4975F9869233E687D18257A2 /* Pods_Airbnb_lottie.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		275F24D222D9D15800FBB718 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
+		276EDCB2229BB29A00EAA47F /* Airbnb-lottie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Airbnb-lottie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		276EDCB5229BB29A00EAA47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		276EDCB7229BB29A00EAA47F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		276EDCBA229BB29A00EAA47F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		276EDCBC229BB29C00EAA47F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		276EDCBF229BB29C00EAA47F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		276EDCC1229BB29C00EAA47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E9615622D8301500F773FC /* 7655-rocket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "7655-rocket.json"; sourceTree = "<group>"; };
+		4975F9869233E687D18257A2 /* Pods_Airbnb_lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Airbnb_lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		938D0F64B106E1BE3685A050 /* Pods-Airbnb-lottie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb-lottie.release.xcconfig"; path = "Target Support Files/Pods-Airbnb-lottie/Pods-Airbnb-lottie.release.xcconfig"; sourceTree = "<group>"; };
+		CE1B2611E2178F4255465190 /* Pods-Airbnb-lottie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb-lottie.debug.xcconfig"; path = "Target Support Files/Pods-Airbnb-lottie/Pods-Airbnb-lottie.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		276EDCAF229BB29A00EAA47F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5430CC647D721C8183C56D /* Pods_Airbnb_lottie.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		276EDCA9229BB29A00EAA47F = {
+			isa = PBXGroup;
+			children = (
+				276EDCB4229BB29A00EAA47F /* Airbnb-lottie */,
+				276EDCB3229BB29A00EAA47F /* Products */,
+				9E59E7FA9E340807A3D5EA98 /* Pods */,
+				C9EF75D7B7F9B77357B6A7BE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		276EDCB3229BB29A00EAA47F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				276EDCB2229BB29A00EAA47F /* Airbnb-lottie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		276EDCB4229BB29A00EAA47F /* Airbnb-lottie */ = {
+			isa = PBXGroup;
+			children = (
+				275F24D222D9D15800FBB718 /* animation.json */,
+				276EDCB5229BB29A00EAA47F /* AppDelegate.swift */,
+				276EDCB7229BB29A00EAA47F /* ViewController.swift */,
+				276EDCB9229BB29A00EAA47F /* Main.storyboard */,
+				276EDCBC229BB29C00EAA47F /* Assets.xcassets */,
+				276EDCBE229BB29C00EAA47F /* LaunchScreen.storyboard */,
+				276EDCC1229BB29C00EAA47F /* Info.plist */,
+				27E9615622D8301500F773FC /* 7655-rocket.json */,
+			);
+			path = "Airbnb-lottie";
+			sourceTree = "<group>";
+		};
+		9E59E7FA9E340807A3D5EA98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE1B2611E2178F4255465190 /* Pods-Airbnb-lottie.debug.xcconfig */,
+				938D0F64B106E1BE3685A050 /* Pods-Airbnb-lottie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C9EF75D7B7F9B77357B6A7BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4975F9869233E687D18257A2 /* Pods_Airbnb_lottie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		276EDCB1229BB29A00EAA47F /* Airbnb-lottie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276EDCC4229BB29C00EAA47F /* Build configuration list for PBXNativeTarget "Airbnb-lottie" */;
+			buildPhases = (
+				B5AAE0972F79E20CD9CA3348 /* [CP] Check Pods Manifest.lock */,
+				276EDCAE229BB29A00EAA47F /* Sources */,
+				276EDCAF229BB29A00EAA47F /* Frameworks */,
+				276EDCB0229BB29A00EAA47F /* Resources */,
+				AFB411CC52C5BB99EEFD4DBE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Airbnb-lottie";
+			productName = "Airbnb-lottie";
+			productReference = 276EDCB2229BB29A00EAA47F /* Airbnb-lottie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		276EDCAA229BB29A00EAA47F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Ning Li";
+				TargetAttributes = {
+					276EDCB1229BB29A00EAA47F = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 276EDCAD229BB29A00EAA47F /* Build configuration list for PBXProject "Airbnb-lottie" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 276EDCA9229BB29A00EAA47F;
+			productRefGroup = 276EDCB3229BB29A00EAA47F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				276EDCB1229BB29A00EAA47F /* Airbnb-lottie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		276EDCB0229BB29A00EAA47F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E9615722D8301600F773FC /* 7655-rocket.json in Resources */,
+				275F24D322D9D15800FBB718 /* animation.json in Resources */,
+				276EDCC0229BB29C00EAA47F /* LaunchScreen.storyboard in Resources */,
+				276EDCBD229BB29C00EAA47F /* Assets.xcassets in Resources */,
+				276EDCBB229BB29A00EAA47F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFB411CC52C5BB99EEFD4DBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Airbnb-lottie/Pods-Airbnb-lottie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Airbnb-lottie/Pods-Airbnb-lottie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Airbnb-lottie/Pods-Airbnb-lottie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5AAE0972F79E20CD9CA3348 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Airbnb-lottie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		276EDCAE229BB29A00EAA47F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276EDCB8229BB29A00EAA47F /* ViewController.swift in Sources */,
+				276EDCB6229BB29A00EAA47F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		276EDCB9229BB29A00EAA47F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				276EDCBA229BB29A00EAA47F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		276EDCBE229BB29C00EAA47F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				276EDCBF229BB29C00EAA47F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		276EDCC2229BB29C00EAA47F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		276EDCC3229BB29C00EAA47F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		276EDCC5229BB29C00EAA47F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE1B2611E2178F4255465190 /* Pods-Airbnb-lottie.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 898932UN9T;
+				INFOPLIST_FILE = "Airbnb-lottie/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yzh.Airbnb-lottie";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		276EDCC6229BB29C00EAA47F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938D0F64B106E1BE3685A050 /* Pods-Airbnb-lottie.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 898932UN9T;
+				INFOPLIST_FILE = "Airbnb-lottie/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yzh.Airbnb-lottie";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		276EDCAD229BB29A00EAA47F /* Build configuration list for PBXProject "Airbnb-lottie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276EDCC2229BB29C00EAA47F /* Debug */,
+				276EDCC3229BB29C00EAA47F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		276EDCC4229BB29C00EAA47F /* Build configuration list for PBXNativeTarget "Airbnb-lottie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276EDCC5229BB29C00EAA47F /* Debug */,
+				276EDCC6229BB29C00EAA47F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 276EDCAA229BB29A00EAA47F /* Project object */;
+}

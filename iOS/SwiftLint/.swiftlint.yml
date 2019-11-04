@@ -1,0 +1,24 @@
+excluded:
+- Pod
+disabled_rules:
+# - colon # 冒号的使用， swiftlint的这个colon属性规则很简单，要求“ ：”紧靠所定义的常量或变量等，必须没有空格，与所指定的类型之间必须只有一个空格，多一个或少一个都不行，如果是用在Dictionary中，则要求紧靠Key，与Value之间必须有且仅有一个空格。这个规则我觉得应该强制推荐使用
+- force_cast # 强制转换， 强制转换应该被避免，否则直接报 error。
+- type_name # 类型名， 类型名应该只包含字母数字字符， 并且以大写字母开头，长度在3-40个字符。这个属性没什么好说的，强烈推荐使用。
+- function_body_length #函数体长度， 函数体不应该跨越太多行， 超过40行给warning， 超过100行直接报错。推荐使用。
+# - control_statement #控制语句， if、for、while、do语句不应该将 条件 写在 圆括号 中， 另外注意条件出的空格。
+- type_body_length #类型体长度。类型体长度不应该跨越太多行， 超过200行给warning，超过350行给error。一般是大括号或者括号内, 比如定义一个enum或struct。
+# - nesting
+- variable_name # 变量名应该只包含字符数字字符， 并且只能以小写字母开头或者应该只包含大写字母。此外，当变量名被声明为static（静态）变量时或者immutable不可变的时候，这时或许可以以一个大写字母开头。最后，变量名不应该太长或者太短(应该在3-40个字符间，否则会触发警告！！！)。注意：目前变量名只适用于自己写的方法的参数和自己写的class中的全局常量或变量， 对于系统自带的方法里面和自己写的方法里面没有作用
+- line_length # 行的字符长度属性。这个强烈不推荐使用。官方的规定是超过120字符就给warning，
+- trailing_whitespace # 尾部空白行强烈不推荐使用
+# - todo # TODO 和 FIXME 应该避免使用， 使用“notaTODO 和 notaFIXME”代替。另外， 和 MARK 标记不同的是， “notaTODO 和 notaFIXME”没有空格要求，但是我建议如果要使用这个 todo 属性， 尽量写成和 MARK 一样的规范。
+# - legacy_constructor
+- valid_docs # 有效文件 。 文件声明应该有效 。这个属性和属性62有冲突， 而且重复， 官网文档写得有问题。另外在swift 3.0上测试并不会发生warning。暂时不举例，这个属性禁用！！！后期等官方完善之后再追加。
+- missing_docs # 缺失说明注释, 官方解释：”Public declarations should be documented.”， 公共声明应该被注释/标记。 在函数声明的时候， 一般情况下， 带public关键字的函数的注释只能用 “///”和 “/* /”来注释， 如果不带public关键字的函数只能用 “//”和 “/* */” 。这个属性应该禁用，没必要！！！
+- file_length # 文件行长度违规:文件应包含400行或以下
+- cyclomatic_complexity # 函数命名的复杂度应该为10或以下，尽量简单比如参数不要过多，修饰符不要过多不然会报错 循环复杂度。函数体的复杂度应该要限制，这个属性主要约束条件句、循环句中的循环嵌套问题， 当嵌套太多的循环时，则会触发swiftlint中的warning和error，当达到10个循环嵌套时就会报warning，达到20个循环嵌套时就会报error，强烈推荐这个属性。嵌套太多，可读性差！
+- large_tuple # 元组冲突:元组应该最多有2个成员，多余两个会报错
+- function_parameter_count # 函数参数计数违例:函数应该有5个参数，多余会报错 函数参数个数， 函数参数数量(init方法除外)应该少点， 不要太多，swiftlint规定函数参数数量超过5个给warning， 超过8个直接报error。这个属性推荐使用， 由于简单就不举例了。注：function_parameter_count: error 这样并不能改变它的警告或错误，该属性不允许修改，但是可以禁用
+- multiple_closures_with_trailing_closure # 多个闭包与尾随闭包冲突:在传递多个闭包参数时不应该使用尾随关闭语法。
+identifier_name:
+excluded: id

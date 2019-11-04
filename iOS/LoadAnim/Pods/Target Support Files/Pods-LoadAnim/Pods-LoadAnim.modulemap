@@ -1,0 +1,6 @@
+framework module Pods_LoadAnim {
+  umbrella header "Pods-LoadAnim-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,21 @@
+PODS:
+  - lottie-ios (3.0.3)
+  - TestNewModule (1.0.0)
+
+DEPENDENCIES:
+  - lottie-ios
+  - TestNewModule
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - lottie-ios
+  trunk:
+    - TestNewModule
+
+SPEC CHECKSUMS:
+  lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
+  TestNewModule: 1270709cf1b3be5c5ab64359077fc115994d436a
+
+PODFILE CHECKSUM: bc63f589b4a785934ecedb12207138ccee3c9d56
+
+COCOAPODS: 1.8.4
