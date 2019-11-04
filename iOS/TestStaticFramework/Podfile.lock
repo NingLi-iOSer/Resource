@@ -1,0 +1,111 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - AMap2DMap-NO-IDFA (5.6.1):
+    - AMapFoundation-NO-IDFA (~> 1.4)
+  - AMapFoundation-NO-IDFA (1.5.7)
+  - AMapSearch-NO-IDFA (6.9.0):
+    - AMapFoundation-NO-IDFA (~> 1.4)
+  - Bugly (2.5.0)
+  - EasyTipView (2.0.4)
+  - HappyDNS (0.3.15)
+  - IQKeyboardManager (6.4.0)
+  - Kingfisher (4.10.1)
+  - libwebp (1.0.3):
+    - libwebp/demux (= 1.0.3)
+    - libwebp/mux (= 1.0.3)
+    - libwebp/webp (= 1.0.3)
+  - libwebp/demux (1.0.3):
+    - libwebp/webp
+  - libwebp/mux (1.0.3):
+    - libwebp/demux
+  - libwebp/webp (1.0.3)
+  - lottie-ios (3.1.2)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.2.0)
+  - pop (1.0.12)
+  - Qiniu (7.2.5):
+    - HappyDNS (~> 0.3)
+  - SDWebImage/Core (5.1.0)
+  - SDWebImageWebPCoder (0.2.3):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.0)
+  - SnapKit (4.2.0)
+  - TZImagePickerController (3.2.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AMap2DMap-NO-IDFA
+  - AMapSearch-NO-IDFA
+  - Bugly
+  - EasyTipView
+  - IQKeyboardManager
+  - Kingfisher
+  - lottie-ios
+  - MBProgressHUD
+  - MJRefresh
+  - pop
+  - Qiniu
+  - SDWebImageWebPCoder
+  - SnapKit
+  - TZImagePickerController
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - AMap2DMap-NO-IDFA
+    - AMapFoundation-NO-IDFA
+    - AMapSearch-NO-IDFA
+    - Bugly
+    - EasyTipView
+    - HappyDNS
+    - IQKeyboardManager
+    - Kingfisher
+    - libwebp
+    - lottie-ios
+    - MBProgressHUD
+    - MJRefresh
+    - pop
+    - Qiniu
+    - SDWebImage
+    - SDWebImageWebPCoder
+    - SnapKit
+    - TZImagePickerController
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AMap2DMap-NO-IDFA: ccecb3e2a044c17e6badb9b91c950e709368be20
+  AMapFoundation-NO-IDFA: 9088085827c831811bb0fd3afd96b99963a7cf71
+  AMapSearch-NO-IDFA: 264999e6c149383a8f164c2fe49b51513e93d674
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  EasyTipView: 4f8beae0a82db2ca4a9b5fd658785fc5f61d296b
+  HappyDNS: 00c15e651a347206e58a20503a32a5564589b56a
+  IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  libwebp: db273b5a72581ca31985dec5c3b8bc826a5f59ee
+  lottie-ios: 49cd85b1f24f61a7708ad7ec76a523ab2d0e3100
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  Qiniu: 909b408ee489ea54827e9717be90b94bc9dfbc48
+  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
+  SDWebImageWebPCoder: 7568737603c50f6237850afedd7e9e28e5917e6b
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
+
+PODFILE CHECKSUM: 75b99ac4419a32ccd00dedc3b4a1afdc8e957fb7
+
+COCOAPODS: 1.6.1

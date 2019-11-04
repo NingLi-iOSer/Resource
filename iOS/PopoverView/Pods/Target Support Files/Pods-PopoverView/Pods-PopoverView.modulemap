@@ -1,0 +1,6 @@
+module Pods_PopoverView {
+  umbrella header "Pods-PopoverView-umbrella.h"
+
+  export *
+  module * { export * }
+}

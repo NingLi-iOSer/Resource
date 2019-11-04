@@ -1,0 +1,20 @@
+PODS:
+  - AMap3DMap-NO-IDFA (6.9.0):
+    - AMapFoundation-NO-IDFA (~> 1.5)
+  - AMapFoundation-NO-IDFA (1.5.7)
+
+DEPENDENCIES:
+  - AMap3DMap-NO-IDFA
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AMap3DMap-NO-IDFA
+    - AMapFoundation-NO-IDFA
+
+SPEC CHECKSUMS:
+  AMap3DMap-NO-IDFA: ffb000a25913efcdc5d979faa54a78655965bc23
+  AMapFoundation-NO-IDFA: 9088085827c831811bb0fd3afd96b99963a7cf71
+
+PODFILE CHECKSUM: e8eee0d08826ccf0f767d573628b8262e6a7b754
+
+COCOAPODS: 1.6.1

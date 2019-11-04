@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
+    </dependencies>
+    <scenes>
+        <!--前天-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="前天" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchWeather_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="136" height="91" alignment="left" image="sunny" contentMode="scaleAspectFit" id="XHy-s3-aT4"/>
+                        <label width="1" alignment="right" text="最高: 0℃" textAlignment="right" id="Z8f-7c-6Vj">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label width="1" alignment="right" text="最低: 0℃" textAlignment="right" id="VgV-e7-efH">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="highTemperatureLabel" destination="Z8f-7c-6Vj" id="cNp-A6-e4M"/>
+                        <outlet property="lowTemperatureLabel" destination="VgV-e7-efH" id="udp-Bt-v1g"/>
+                        <outlet property="weatherImageView" destination="XHy-s3-aT4" id="cez-bI-irG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="329"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="245" y="1095"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchWeather_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="1095"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="WatchWeather_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="1095"/>
+        </scene>
+        <!--昨天-->
+        <scene sceneID="95f-GT-jYU">
+            <objects>
+                <controller title="昨天" id="wCo-qQ-QYR" customClass="InterfaceController" customModule="WatchWeather_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="136" height="91" alignment="left" image="sunny" contentMode="scaleAspectFit" id="jEI-aB-54Z"/>
+                        <label width="1" alignment="right" text="最高: 0℃" textAlignment="right" id="Uec-RB-egI">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label width="1" alignment="right" text="最低: 0℃" textAlignment="right" id="0aA-1c-P2d">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="highTemperatureLabel" destination="Uec-RB-egI" id="HzY-Lh-7mq"/>
+                        <outlet property="lowTemperatureLabel" destination="0aA-1c-P2d" id="VeT-Wi-pI4"/>
+                        <outlet property="weatherImageView" destination="jEI-aB-54Z" id="HMI-0e-3ew"/>
+                        <segue destination="7hk-ep-lME" kind="relationship" relationship="nextPage" id="SnI-Rh-Rud"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="454" y="329"/>
+        </scene>
+        <!--今天-->
+        <scene sceneID="PPW-PL-RUW">
+            <objects>
+                <controller title="今天" id="7hk-ep-lME" customClass="InterfaceController" customModule="WatchWeather_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="136" height="91" alignment="left" image="sunny" contentMode="scaleAspectFit" id="jBg-rP-PzF"/>
+                        <label width="1" alignment="right" text="最高: 0℃" textAlignment="right" id="Rej-6S-ADC">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label width="1" alignment="right" text="最低: 0℃" textAlignment="right" id="wZq-oh-gM8">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="highTemperatureLabel" destination="Rej-6S-ADC" id="qjy-da-lan"/>
+                        <outlet property="lowTemperatureLabel" destination="wZq-oh-gM8" id="McL-eL-u36"/>
+                        <outlet property="weatherImageView" destination="jBg-rP-PzF" id="2uH-qg-uu3"/>
+                        <segue destination="MZE-Vt-Mdr" kind="relationship" relationship="nextPage" id="NWZ-US-jNB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="651"/>
+        </scene>
+        <!--明天-->
+        <scene sceneID="7tq-65-cfI">
+            <objects>
+                <controller title="明天" id="MZE-Vt-Mdr" customClass="InterfaceController" customModule="WatchWeather_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="136" height="91" alignment="left" image="sunny" contentMode="scaleAspectFit" id="f17-F7-bPq"/>
+                        <label width="1" alignment="right" text="最高: 0℃" textAlignment="right" id="5zt-WA-CCw">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label width="1" alignment="right" text="最低: 0℃" textAlignment="right" id="Bl8-Qh-tOh">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="highTemperatureLabel" destination="5zt-WA-CCw" id="pm6-j1-dNw"/>
+                        <outlet property="lowTemperatureLabel" destination="Bl8-Qh-tOh" id="YkX-5P-LbZ"/>
+                        <outlet property="weatherImageView" destination="f17-F7-bPq" id="OzC-OK-qMa"/>
+                        <segue destination="IS0-g0-vuY" kind="relationship" relationship="nextPage" id="3No-RE-mGH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="454" y="651"/>
+        </scene>
+        <!--后天-->
+        <scene sceneID="MNx-bA-rXm">
+            <objects>
+                <controller title="后天" id="IS0-g0-vuY" customClass="InterfaceController" customModule="WatchWeather_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="136" height="91" alignment="left" image="sunny" contentMode="scaleAspectFit" id="pEa-zC-gYi"/>
+                        <label width="1" alignment="right" text="最高: 0℃" textAlignment="right" id="HFk-I4-8fe">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label width="1" alignment="right" text="最低: 0℃" textAlignment="right" id="gdr-v3-kUq">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="highTemperatureLabel" destination="HFk-I4-8fe" id="Led-rd-8LV"/>
+                        <outlet property="lowTemperatureLabel" destination="gdr-v3-kUq" id="AOR-KY-vWj"/>
+                        <outlet property="weatherImageView" destination="pEa-zC-gYi" id="zRt-IA-lJl"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="698" y="651"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sunny" width="173" height="174"/>
+    </resources>
+</document>

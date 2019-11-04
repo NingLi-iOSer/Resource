@@ -1,0 +1,10 @@
+{
+  "commitish" : "0.3.0",
+  "iOS" : [
+    {
+      "name" : "MMDB",
+      "hash" : "2ae6b403f3e1a906b3a72912901417d2b1e9b4bda6430e3b413141f1aede8ce9",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}

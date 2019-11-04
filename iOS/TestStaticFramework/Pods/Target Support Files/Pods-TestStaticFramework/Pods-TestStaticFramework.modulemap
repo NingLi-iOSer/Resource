@@ -1,0 +1,6 @@
+module Pods_TestStaticFramework {
+  umbrella header "Pods-TestStaticFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}

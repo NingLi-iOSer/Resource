@@ -1,0 +1,14 @@
+{
+  "commitish" : "0.7.0",
+  "iOS" : [
+    {
+      "name" : "tun2socks",
+      "hash" : "dfc2d66b4d5a0ad7c9e01ddd94c40745e0a45e814b39a4b03ba39c74741fee5b",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    },
+    {
+      "name" : "lwip",
+      "hash" : "fad1fc54f35bd97a20c13b22c66264eba330fc8303cc371b449b3fc6b14c3c85"
+    }
+  ]
+}

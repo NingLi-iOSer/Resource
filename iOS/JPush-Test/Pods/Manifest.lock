@@ -1,0 +1,20 @@
+PODS:
+  - JCore (1.2.6)
+  - JPush (3.1.2):
+    - JCore (~> 1.2.6)
+
+DEPENDENCIES:
+  - JPush
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JCore
+    - JPush
+
+SPEC CHECKSUMS:
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
+
+PODFILE CHECKSUM: 2f6787d83befb34e73d795ba80f6a98bd24183f4
+
+COCOAPODS: 1.5.3

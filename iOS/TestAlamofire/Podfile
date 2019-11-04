@@ -1,0 +1,8 @@
+platform :ios, '9.0'
+
+target 'TestAlamofire' do
+  use_modular_headers!
+
+  pod 'Alamofire'
+
+end

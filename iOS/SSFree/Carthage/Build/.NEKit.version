@@ -1,0 +1,10 @@
+{
+  "commitish" : "0.14.0",
+  "iOS" : [
+    {
+      "name" : "NEKit",
+      "hash" : "a1d66753b8f29d0fad71fab7d87e428bce0e89a0b403ca31a2a7eafa5d81155f",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+module EasyTipView {
+  umbrella header "EasyTipView-umbrella.h"
+
+  export *
+  module * { export * }
+}

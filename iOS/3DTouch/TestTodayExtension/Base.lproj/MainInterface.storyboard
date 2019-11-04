@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="TestTodayExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4gJ-hh-3qf">
+                                <rect key="frame" x="0.0" y="44" width="320" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iH-ww-JN3">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
+                                        <state key="normal" image="check-tianjia"/>
+                                        <connections>
+                                            <action selector="openMainApp" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Qag-IZ-I0Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15T-2h-sW5">
+                                        <rect key="frame" x="80" y="0.0" width="80" height="110"/>
+                                        <state key="normal" image="btn_close"/>
+                                        <connections>
+                                            <action selector="openMainApp" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="IrM-OT-k3k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlB-zd-u29">
+                                        <rect key="frame" x="160" y="0.0" width="80" height="110"/>
+                                        <state key="normal" image="btn_scan_qr_code_gray"/>
+                                        <connections>
+                                            <action selector="openMainApp" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="8Sy-af-doU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDt-54-24x">
+                                        <rect key="frame" x="240" y="0.0" width="80" height="110"/>
+                                        <state key="normal" image="icon_log_out"/>
+                                        <connections>
+                                            <action selector="openMainApp" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="vTA-8G-n2V"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4gJ-hh-3qf" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="Chu-Qo-5hc"/>
+                            <constraint firstItem="4gJ-hh-3qf" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="MYv-JG-vsk"/>
+                            <constraint firstAttribute="bottom" secondItem="4gJ-hh-3qf" secondAttribute="bottom" id="vdt-3A-Og7"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="4gJ-hh-3qf" secondAttribute="trailing" id="zrd-kU-HET"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="154"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_close" width="30" height="30"/>
+        <image name="btn_scan_qr_code_gray" width="22" height="22"/>
+        <image name="check-tianjia" width="37" height="37"/>
+        <image name="icon_log_out" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LPt-YU-umK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="PpC-KQ-Dr6">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="LPt-YU-umK" customClass="ViewController" customModule="WatchWeather" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D44-nc-r2p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="-150"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="Hoq-WH-qcT">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewController" id="wuq-ai-vhM" customClass="WeatherViewController" customModule="WatchWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="igy-g4-w65">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="8sV-sl-vFa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunny" translatesAutoresizingMaskIntoConstraints="NO" id="GlE-nX-Ehp">
+                                <rect key="frame" x="120.5" y="194" width="173" height="174"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBj-W1-dxm">
+                                <rect key="frame" x="345" y="432" width="53" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最低" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpc-Dr-gVx">
+                                <rect key="frame" x="268" y="432" width="61" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReK-mF-SQD">
+                                <rect key="frame" x="345" y="484" width="53" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSJ-gD-vPn">
+                                <rect key="frame" x="268" y="484" width="61" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zpc-Dr-gVx" firstAttribute="bottom" secondItem="OBj-W1-dxm" secondAttribute="bottom" id="8UP-Br-h4L"/>
+                            <constraint firstItem="GlE-nX-Ehp" firstAttribute="top" secondItem="Hpi-sJ-S8w" secondAttribute="top" constant="150" id="8m1-Sv-ScF"/>
+                            <constraint firstItem="Hpi-sJ-S8w" firstAttribute="trailing" secondItem="8sV-sl-vFa" secondAttribute="trailing" id="MNG-Na-QE3"/>
+                            <constraint firstItem="GlE-nX-Ehp" firstAttribute="centerX" secondItem="igy-g4-w65" secondAttribute="centerX" id="SVT-tT-fe8"/>
+                            <constraint firstItem="OBj-W1-dxm" firstAttribute="leading" secondItem="Zpc-Dr-gVx" secondAttribute="trailing" constant="16" id="X9m-ko-2UQ"/>
+                            <constraint firstItem="ReK-mF-SQD" firstAttribute="trailing" secondItem="OBj-W1-dxm" secondAttribute="trailing" id="c2m-50-MxA"/>
+                            <constraint firstItem="WSJ-gD-vPn" firstAttribute="bottom" secondItem="ReK-mF-SQD" secondAttribute="bottom" id="eXe-Ay-Byo"/>
+                            <constraint firstItem="OBj-W1-dxm" firstAttribute="top" secondItem="GlE-nX-Ehp" secondAttribute="bottom" constant="64" id="epS-L1-ZAg"/>
+                            <constraint firstItem="8sV-sl-vFa" firstAttribute="top" secondItem="igy-g4-w65" secondAttribute="top" id="f8y-eM-E6l"/>
+                            <constraint firstItem="ReK-mF-SQD" firstAttribute="leading" secondItem="WSJ-gD-vPn" secondAttribute="trailing" constant="16" id="k7D-6S-TVV"/>
+                            <constraint firstItem="8sV-sl-vFa" firstAttribute="leading" secondItem="Hpi-sJ-S8w" secondAttribute="leading" id="mmQ-6H-H0S"/>
+                            <constraint firstAttribute="bottom" secondItem="8sV-sl-vFa" secondAttribute="bottom" id="sqf-7z-6SQ"/>
+                            <constraint firstItem="Hpi-sJ-S8w" firstAttribute="trailing" secondItem="OBj-W1-dxm" secondAttribute="trailing" constant="16" id="t15-wP-vdE"/>
+                            <constraint firstItem="ReK-mF-SQD" firstAttribute="top" secondItem="OBj-W1-dxm" secondAttribute="bottom" constant="16" id="vXc-FI-ozG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hpi-sJ-S8w"/>
+                    </view>
+                    <connections>
+                        <outlet property="highTemperatureLabel" destination="OBj-W1-dxm" id="g6t-47-A6w"/>
+                        <outlet property="lowTemperatureLabel" destination="ReK-mF-SQD" id="vmP-fc-vK7"/>
+                        <outlet property="weatherImageView" destination="GlE-nX-Ehp" id="B6f-lq-7Wd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PGB-Zt-3ri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="-150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="320" height="568"/>
+        <image name="sunny" width="173" height="174"/>
+    </resources>
+</document>

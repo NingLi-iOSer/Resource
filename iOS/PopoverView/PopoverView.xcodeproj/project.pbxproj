@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E1DDEFA0B59629B4264E2F8 /* libPods-PopoverView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 350169378207659E219A0EE9 /* libPods-PopoverView.a */; };
+		27C880F32314F63A008C3C04 /* MSPopoverTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C880F22314F63A008C3C04 /* MSPopoverTableView.swift */; };
+		27D564822314DFCC000BE379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D564812314DFCC000BE379 /* AppDelegate.swift */; };
+		27D564842314DFCC000BE379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D564832314DFCC000BE379 /* ViewController.swift */; };
+		27D564872314DFCC000BE379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D564852314DFCC000BE379 /* Main.storyboard */; };
+		27D564892314DFCD000BE379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D564882314DFCD000BE379 /* Assets.xcassets */; };
+		27D5648C2314DFCD000BE379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D5648A2314DFCD000BE379 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01834F57B6AFFCC7DA7C1050 /* Pods-PopoverView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopoverView.debug.xcconfig"; path = "Target Support Files/Pods-PopoverView/Pods-PopoverView.debug.xcconfig"; sourceTree = "<group>"; };
+		27C880F22314F63A008C3C04 /* MSPopoverTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSPopoverTableView.swift; sourceTree = "<group>"; };
+		27D5647E2314DFCC000BE379 /* PopoverView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopoverView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D564812314DFCC000BE379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27D564832314DFCC000BE379 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27D564862314DFCC000BE379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27D564882314DFCD000BE379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27D5648B2314DFCD000BE379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27D5648D2314DFCD000BE379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350169378207659E219A0EE9 /* libPods-PopoverView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PopoverView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E821C1C64EB631AC3A723A8F /* Pods-PopoverView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopoverView.release.xcconfig"; path = "Target Support Files/Pods-PopoverView/Pods-PopoverView.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27D5647B2314DFCC000BE379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E1DDEFA0B59629B4264E2F8 /* libPods-PopoverView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1025D4EC930E5D066F6C3DDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01834F57B6AFFCC7DA7C1050 /* Pods-PopoverView.debug.xcconfig */,
+				E821C1C64EB631AC3A723A8F /* Pods-PopoverView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		27D564752314DFCC000BE379 = {
+			isa = PBXGroup;
+			children = (
+				27D564802314DFCC000BE379 /* PopoverView */,
+				27D5647F2314DFCC000BE379 /* Products */,
+				1025D4EC930E5D066F6C3DDD /* Pods */,
+				47EDACDAB46ED469D7A22200 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		27D5647F2314DFCC000BE379 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27D5647E2314DFCC000BE379 /* PopoverView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27D564802314DFCC000BE379 /* PopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				27D564812314DFCC000BE379 /* AppDelegate.swift */,
+				27D564832314DFCC000BE379 /* ViewController.swift */,
+				27C880F22314F63A008C3C04 /* MSPopoverTableView.swift */,
+				27D564852314DFCC000BE379 /* Main.storyboard */,
+				27D564882314DFCD000BE379 /* Assets.xcassets */,
+				27D5648A2314DFCD000BE379 /* LaunchScreen.storyboard */,
+				27D5648D2314DFCD000BE379 /* Info.plist */,
+			);
+			path = PopoverView;
+			sourceTree = "<group>";
+		};
+		47EDACDAB46ED469D7A22200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				350169378207659E219A0EE9 /* libPods-PopoverView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27D5647D2314DFCC000BE379 /* PopoverView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D564902314DFCD000BE379 /* Build configuration list for PBXNativeTarget "PopoverView" */;
+			buildPhases = (
+				230C66AF2BA4B859A7ED243C /* [CP] Check Pods Manifest.lock */,
+				27D5647A2314DFCC000BE379 /* Sources */,
+				27D5647B2314DFCC000BE379 /* Frameworks */,
+				27D5647C2314DFCC000BE379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopoverView;
+			productName = PopoverView;
+			productReference = 27D5647E2314DFCC000BE379 /* PopoverView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27D564762314DFCC000BE379 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Ning Li";
+				TargetAttributes = {
+					27D5647D2314DFCC000BE379 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 27D564792314DFCC000BE379 /* Build configuration list for PBXProject "PopoverView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27D564752314DFCC000BE379;
+			productRefGroup = 27D5647F2314DFCC000BE379 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27D5647D2314DFCC000BE379 /* PopoverView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27D5647C2314DFCC000BE379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D5648C2314DFCD000BE379 /* LaunchScreen.storyboard in Resources */,
+				27D564892314DFCD000BE379 /* Assets.xcassets in Resources */,
+				27D564872314DFCC000BE379 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		230C66AF2BA4B859A7ED243C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PopoverView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27D5647A2314DFCC000BE379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D564842314DFCC000BE379 /* ViewController.swift in Sources */,
+				27D564822314DFCC000BE379 /* AppDelegate.swift in Sources */,
+				27C880F32314F63A008C3C04 /* MSPopoverTableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27D564852314DFCC000BE379 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27D564862314DFCC000BE379 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27D5648A2314DFCD000BE379 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27D5648B2314DFCD000BE379 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27D5648E2314DFCD000BE379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27D5648F2314DFCD000BE379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27D564912314DFCD000BE379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01834F57B6AFFCC7DA7C1050 /* Pods-PopoverView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 855B44VF85;
+				INFOPLIST_FILE = PopoverView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NingLi.PopoverView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27D564922314DFCD000BE379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E821C1C64EB631AC3A723A8F /* Pods-PopoverView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 855B44VF85;
+				INFOPLIST_FILE = PopoverView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NingLi.PopoverView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27D564792314DFCC000BE379 /* Build configuration list for PBXProject "PopoverView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D5648E2314DFCD000BE379 /* Debug */,
+				27D5648F2314DFCD000BE379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D564902314DFCD000BE379 /* Build configuration list for PBXNativeTarget "PopoverView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D564912314DFCD000BE379 /* Debug */,
+				27D564922314DFCD000BE379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27D564762314DFCC000BE379 /* Project object */;
+}

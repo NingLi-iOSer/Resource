@@ -1,0 +1,10 @@
+{
+  "commitish" : "3.4.3",
+  "iOS" : [
+    {
+      "name" : "Yaml",
+      "hash" : "780b14ec5540d34f0a963ce8edffe34bb6c50cd468c14b90e3ec95a11fb6a912",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}

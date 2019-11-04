@@ -1,0 +1,9 @@
+{
+  "commitish" : "1.0.12",
+  "iOS" : [
+    {
+      "name" : "pop",
+      "hash" : "f3b80f22e01717da9237d7301ad6432f924f8cd6c6da69459042814b2c98b76a"
+    }
+  ]
+}

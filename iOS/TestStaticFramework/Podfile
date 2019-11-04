@@ -1,0 +1,23 @@
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+target 'TestStaticFramework' do
+  use_modular_headers!
+  
+  pod 'AFNetworking'
+  pod 'SnapKit'
+  pod 'MBProgressHUD'
+  pod 'MJRefresh'
+  pod 'Kingfisher'
+  pod 'TZImagePickerController'
+  pod 'pop'
+  pod 'AMapSearch-NO-IDFA'
+  pod 'AMap2DMap-NO-IDFA'
+  pod 'IQKeyboardManager'
+  pod 'Qiniu'
+  pod 'EasyTipView'
+  pod 'lottie-ios'
+  pod 'Bugly'
+  pod 'SDWebImageWebPCoder'
+
+end

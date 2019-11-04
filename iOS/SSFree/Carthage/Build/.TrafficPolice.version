@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.1",
+  "iOS" : [
+    {
+      "name" : "TrafficPolice",
+      "hash" : "0893c69e372aefc72f19bf8696a5bddd0e4eb7ab2c748d403fceaf39b92949a1",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+default_platform(:ios)
+
+platform :ios do
+before_all do
+end
+lane :beta do |options|
+cocoapods
+build_app(export_method: "ad-hoc")
+pgyer(api_key: "885b692ac025cb64e2ccb04d0fcb8e64", user_key: "93fe7169892d5a8a53b65a833a82d084")
+end
+
+after_all do |lane|
+end
+
+error do |lane, exception|
+  end
+end

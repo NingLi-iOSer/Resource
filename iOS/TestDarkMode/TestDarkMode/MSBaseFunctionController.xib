@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MSBaseFunctionController" customModule="ManagementSystem" customModuleProvider="target">
+            <connections>
+                <outlet property="filterButton" destination="iDu-vN-c0h" id="otg-vG-i6S"/>
+                <outlet property="functionView" destination="kR6-qP-FIW" id="Wob-YO-LDV"/>
+                <outlet property="mainTableView" destination="Mag-sq-WVo" id="mxu-Zq-M3D"/>
+                <outlet property="sortButton" destination="PvB-Xl-vyG" id="Z1W-as-RIi"/>
+                <outlet property="view" destination="rNZ-X7-glF" id="G29-1r-kFD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rNZ-X7-glF">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mag-sq-WVo">
+                    <rect key="frame" x="0.0" y="102" width="375" height="565"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5GU-Qh-vtP"/>
+                        <outlet property="delegate" destination="-1" id="C1J-PV-ehH"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kR6-qP-FIW">
+                    <rect key="frame" x="0.0" y="64" width="375" height="38"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvB-Xl-vyG" customClass="MSTextImageButton" customModule="ManagementSystem" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="38"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <state key="normal" title="时间降序" image="btn_ranking">
+                                <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.26274509800000001" green="0.59607843140000005" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.26274509800000001" green="0.59607843140000005" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="contentSpace">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="sortButtonClickWithButton:" destination="-1" eventType="touchUpInside" id="71J-W7-uMf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDu-vN-c0h" customClass="MSTextImageButton" customModule="ManagementSystem" customModuleProvider="target">
+                            <rect key="frame" x="188" y="0.0" width="187" height="38"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <state key="normal" title="筛选" image="btn_filtrate">
+                                <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="selected" image="btn_filtrate_pre">
+                                <color key="titleColor" red="0.26274509800000001" green="0.59607843140000005" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted" image="btn_filtrate_pre">
+                                <color key="titleColor" red="0.26274509800000001" green="0.59607843140000005" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="contentSpace">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="filterButtonClick" destination="-1" eventType="touchUpInside" id="LD8-8c-ica"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5a-5K-3Di">
+                            <rect key="frame" x="187" y="11" width="1" height="16"/>
+                            <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="Ogt-t8-ThW"/>
+                                <constraint firstAttribute="width" constant="1" id="Qz7-kn-TfR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="z5a-5K-3Di" firstAttribute="leading" secondItem="PvB-Xl-vyG" secondAttribute="trailing" id="Jps-ze-8hK"/>
+                        <constraint firstItem="iDu-vN-c0h" firstAttribute="leading" secondItem="z5a-5K-3Di" secondAttribute="trailing" id="Mf7-FK-WGl"/>
+                        <constraint firstAttribute="trailing" secondItem="iDu-vN-c0h" secondAttribute="trailing" id="QeH-hg-P7t"/>
+                        <constraint firstAttribute="height" constant="38" id="Uuc-Es-Vh6"/>
+                        <constraint firstItem="z5a-5K-3Di" firstAttribute="centerX" secondItem="kR6-qP-FIW" secondAttribute="centerX" id="aQ5-ZZ-8Qu"/>
+                        <constraint firstItem="PvB-Xl-vyG" firstAttribute="leading" secondItem="kR6-qP-FIW" secondAttribute="leading" id="abv-Zx-3Qz"/>
+                        <constraint firstItem="z5a-5K-3Di" firstAttribute="centerY" secondItem="iDu-vN-c0h" secondAttribute="centerY" id="b4K-Ku-rTV"/>
+                        <constraint firstItem="PvB-Xl-vyG" firstAttribute="top" secondItem="kR6-qP-FIW" secondAttribute="top" id="o4a-cb-KHd"/>
+                        <constraint firstAttribute="bottom" secondItem="PvB-Xl-vyG" secondAttribute="bottom" id="obr-Vt-3zG"/>
+                        <constraint firstAttribute="bottom" secondItem="iDu-vN-c0h" secondAttribute="bottom" id="s8Z-EY-rG4"/>
+                        <constraint firstItem="iDu-vN-c0h" firstAttribute="top" secondItem="kR6-qP-FIW" secondAttribute="top" id="t2z-tQ-gb0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="euN-P7-mbv" firstAttribute="trailing" secondItem="Mag-sq-WVo" secondAttribute="trailing" id="Kjq-yR-nAy"/>
+                <constraint firstItem="kR6-qP-FIW" firstAttribute="top" secondItem="euN-P7-mbv" secondAttribute="top" constant="44" id="LgO-kn-hkJ"/>
+                <constraint firstItem="Mag-sq-WVo" firstAttribute="leading" secondItem="euN-P7-mbv" secondAttribute="leading" id="NUh-Mw-KvR"/>
+                <constraint firstItem="kR6-qP-FIW" firstAttribute="trailing" secondItem="euN-P7-mbv" secondAttribute="trailing" id="OfO-U0-pH1"/>
+                <constraint firstItem="kR6-qP-FIW" firstAttribute="leading" secondItem="euN-P7-mbv" secondAttribute="leading" id="RQX-VZ-rPm"/>
+                <constraint firstItem="euN-P7-mbv" firstAttribute="bottom" secondItem="Mag-sq-WVo" secondAttribute="bottom" id="V89-yL-Foo"/>
+                <constraint firstItem="Mag-sq-WVo" firstAttribute="top" secondItem="kR6-qP-FIW" secondAttribute="bottom" id="ezi-XL-dF0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="euN-P7-mbv"/>
+            <point key="canvasLocation" x="32.799999999999997" y="52.623688155922046"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_filtrate" width="16" height="16"/>
+        <image name="btn_filtrate_pre" width="16" height="16"/>
+        <image name="btn_ranking" width="16" height="16"/>
+    </resources>
+</document>
