@@ -14,15 +14,31 @@ struct Home: View {
         .init(grouping: landmarks, by: { $0.category })
     }
     
-    var body: some View {
-        NavigationView {
-            List {
-                Image(landmarks[0].imageName)
+    @State var showProfile: Bool = false
+    @State var currentPage: Int = 0
+    
+    let pages: [UIViewController]
+    
+    init() {
+        pages = featuredLandmarks.map {
+            UIHostingController(rootView:
+                Image($0.imageName)
                     .resizable()
                     .scaledToFill()
-                    .frame(height: 200)
-                    .clipped()
-                    .listRowInsets(EdgeInsets())
+            )
+        }
+    }
+    
+    var body: some View {
+        NavigationView {
+            
+            List {
+                ZStack(alignment: .bottom) {
+                    PageVC(featuredVCs: pages, currentPage: $currentPage)
+                        .frame(height: 200)
+                    PageControl(numberOfPages: featuredLandmarks.count, currentPage: $currentPage)
+                }
+                .listRowInsets(EdgeInsets())
                 
                 ForEach(categories.keys.sorted(), id: \.self) { categoryName in
                     CategoryCell(categoryName: categoryName, landmarks: self.categories[categoryName]!)
@@ -33,7 +49,19 @@ struct Home: View {
                     Text("查看所有地标")
                 }
             }
+            .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("精选"))
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showProfile.toggle()
+                }, label: {
+                    Image(systemName: "person.crop.circle")
+                        .renderingMode(.original)
+                        .imageScale(.large)
+                })
+            ).sheet(isPresented: $showProfile) {
+                Profile()
+            }
         }
     }
 }
