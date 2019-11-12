@@ -263,6 +263,48 @@ import Foundation
 //print(heapSort(numbers, <))
 //print(CACurrentMediaTime())
 
-let attr = """
-Hello
-"""
+//let attr = """
+//Hello
+//"""
+
+//var number = UInt8.max
+//number &+ 1
+
+//let number1 = Int8(clamping: 200)
+//let number2 = Int8(clamping: -200)
+
+//let u: UInt8 = 0b11110000
+//Int8(truncatingIfNeeded: u)
+
+//let lhs: Double = 0.1
+//let rhs: Double = 0.2
+//lhs + rhs
+//lhs + rhs == 0.3
+
+//Int8(exactly: 123)
+
+//let formatter = NumberFormatter()
+//formatter.numberStyle = .ordinal
+//formatter.locale = Locale(identifier: "hi")
+//formatter.string(for: 1)
+
+//let price: Decimal = 300.00
+//
+//let formatter = NumberFormatter()
+//formatter.numberStyle = .currency
+//
+//formatter.locale = Locale(identifier: "en-US")
+//formatter.currencySymbol = "$"
+//formatter.string(for: price)
+//
+//formatter.locale = Locale(identifier: "ja-JP")
+//formatter.currencySymbol = "¥"
+//formatter.string(for: price)
+
+let formatter = NumberFormatter()
+formatter.numberStyle = .decimal
+formatter.positiveFormat = "#,###0.5"
+formatter.locale = Locale(identifier: "en-US")
+formatter.string(for: 5324241231234.567) // 1,234.5
+formatter.locale = Locale(identifier: "fr-FR")
+formatter.string(for: 5324241231234.567)
