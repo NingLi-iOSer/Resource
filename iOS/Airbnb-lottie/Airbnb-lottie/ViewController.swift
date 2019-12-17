@@ -11,12 +11,12 @@ import Lottie
 
 class ViewController: UIViewController {
     
-    private lazy var animView = AnimationView(name: "animation")
+    private lazy var animView = AnimationView(name: "data(1)")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animView.bounds.size = CGSize(width: 100, height: 100)
+        animView.bounds.size = CGSize(width: 200, height: 200)
         animView.loopMode = .loop
         view.addSubview(animView)
         

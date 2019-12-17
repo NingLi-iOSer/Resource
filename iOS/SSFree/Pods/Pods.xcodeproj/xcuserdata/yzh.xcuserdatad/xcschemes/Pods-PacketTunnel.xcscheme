@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0432D1303D88B9EB23EBE03FF1554857"
+               BlueprintIdentifier = "878A56817FF7F323C4E6E3E60AEB72A2"
                BuildableName = "Pods_PacketTunnel.framework"
                BlueprintName = "Pods-PacketTunnel"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -1,21 +1,28 @@
 PODS:
+  - BSBacktraceLogger (0.0.1)
+  - DoraemonKit/Core (1.2.4):
+    - BSBacktraceLogger
+    - fishhook
+  - fishhook (0.2)
   - lottie-ios (3.0.3)
-  - TestNewModule (1.0.0)
 
 DEPENDENCIES:
+  - DoraemonKit/Core
   - lottie-ios
-  - TestNewModule
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - BSBacktraceLogger
+    - DoraemonKit
+    - fishhook
     - lottie-ios
-  trunk:
-    - TestNewModule
 
 SPEC CHECKSUMS:
+  BSBacktraceLogger: 06b983ee93a9f87d957960e9c73d660d5966b447
+  DoraemonKit: 5328b8b57cd900f6a24f7f66051346dd4409437d
+  fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
-  TestNewModule: 1270709cf1b3be5c5ab64359077fc115994d436a
 
-PODFILE CHECKSUM: bc63f589b4a785934ecedb12207138ccee3c9d56
+PODFILE CHECKSUM: 2a49375d44f4d82fc5d6a44ddab6894ac27ced77
 
 COCOAPODS: 1.8.4

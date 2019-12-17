@@ -1,10 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '9.0'
 
 target 'Airbnb-lottie' do
   use_frameworks!
 
   pod 'lottie-ios'
-#  pod 'TestNewModule'
-  pod 'LLDebugToolSwift' , '~> 1.0' ,:configurations => ['Debug']
+  pod 'DoraemonKit/Core'
 
 end

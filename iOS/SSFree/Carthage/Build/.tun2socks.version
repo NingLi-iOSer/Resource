@@ -1,14 +1,25 @@
 {
   "commitish" : "0.7.0",
+  "Mac" : [
+    {
+      "name" : "lwip",
+      "hash" : "44e1e88bbcbf49ad2df51a36d98203b5a970166b71fb53c1b1042c4b677889a5"
+    },
+    {
+      "name" : "tun2socks",
+      "hash" : "71670021b824feb57c9b39d725ce179d0f0ce31312951332439c9b8c66171faa",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ],
   "iOS" : [
     {
       "name" : "tun2socks",
-      "hash" : "dfc2d66b4d5a0ad7c9e01ddd94c40745e0a45e814b39a4b03ba39c74741fee5b",
-      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+      "hash" : "45ab9b11add5f0ed5cce491913127319830a379984bc306218380bff1079a5f0",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     },
     {
       "name" : "lwip",
-      "hash" : "fad1fc54f35bd97a20c13b22c66264eba330fc8303cc371b449b3fc6b14c3c85"
+      "hash" : "a4d071a92a6aa087cf22a4f0b7a694fad5d5bdcf3620837089f0f7818e70ede1"
     }
   ]
 }

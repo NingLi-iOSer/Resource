@@ -3,21 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2751D76923962E9400C8AD1C /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2751D76823962E9400C8AD1C /* data.json */; };
 		275F24D322D9D15800FBB718 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 275F24D222D9D15800FBB718 /* animation.json */; };
 		276EDCB6229BB29A00EAA47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EDCB5229BB29A00EAA47F /* AppDelegate.swift */; };
 		276EDCB8229BB29A00EAA47F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EDCB7229BB29A00EAA47F /* ViewController.swift */; };
 		276EDCBB229BB29A00EAA47F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276EDCB9229BB29A00EAA47F /* Main.storyboard */; };
 		276EDCBD229BB29C00EAA47F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276EDCBC229BB29C00EAA47F /* Assets.xcassets */; };
 		276EDCC0229BB29C00EAA47F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276EDCBE229BB29C00EAA47F /* LaunchScreen.storyboard */; };
+		27D14FA1239630410026AAFA /* data(1).json in Resources */ = {isa = PBXBuildFile; fileRef = 27D14FA0239630410026AAFA /* data(1).json */; };
 		27E9615722D8301600F773FC /* 7655-rocket.json in Resources */ = {isa = PBXBuildFile; fileRef = 27E9615622D8301500F773FC /* 7655-rocket.json */; };
 		CA5430CC647D721C8183C56D /* Pods_Airbnb_lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4975F9869233E687D18257A2 /* Pods_Airbnb_lottie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2751D76823962E9400C8AD1C /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		275F24D222D9D15800FBB718 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		276EDCB2229BB29A00EAA47F /* Airbnb-lottie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Airbnb-lottie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		276EDCB5229BB29A00EAA47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		276EDCBC229BB29C00EAA47F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276EDCBF229BB29C00EAA47F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276EDCC1229BB29C00EAA47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D14FA0239630410026AAFA /* data(1).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data(1).json"; sourceTree = "<group>"; };
 		27E9615622D8301500F773FC /* 7655-rocket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "7655-rocket.json"; sourceTree = "<group>"; };
 		4975F9869233E687D18257A2 /* Pods_Airbnb_lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Airbnb_lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		938D0F64B106E1BE3685A050 /* Pods-Airbnb-lottie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb-lottie.release.xcconfig"; path = "Target Support Files/Pods-Airbnb-lottie/Pods-Airbnb-lottie.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				276EDCBE229BB29C00EAA47F /* LaunchScreen.storyboard */,
 				276EDCC1229BB29C00EAA47F /* Info.plist */,
 				27E9615622D8301500F773FC /* 7655-rocket.json */,
+				2751D76823962E9400C8AD1C /* data.json */,
+				27D14FA0239630410026AAFA /* data(1).json */,
 			);
 			path = "Airbnb-lottie";
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E9615722D8301600F773FC /* 7655-rocket.json in Resources */,
+				27D14FA1239630410026AAFA /* data(1).json in Resources */,
+				2751D76923962E9400C8AD1C /* data.json in Resources */,
 				275F24D322D9D15800FBB718 /* animation.json in Resources */,
 				276EDCC0229BB29C00EAA47F /* LaunchScreen.storyboard in Resources */,
 				276EDCBD229BB29C00EAA47F /* Assets.xcassets in Resources */,

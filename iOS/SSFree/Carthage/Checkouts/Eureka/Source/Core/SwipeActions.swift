@@ -15,15 +15,9 @@ public class SwipeAction: ContextualAction {
     let handler: SwipeActionHandler
     let style: Style
 
-    public var actionBackgroundColor: UIColor?
+    public var backgroundColor: UIColor?
     public var image: UIImage?
     public var title: String?
-
-    @available (*, deprecated, message: "Use actionBackgroundColor instead")
-    public var backgroundColor: UIColor? {
-        get { return actionBackgroundColor }
-        set { self.actionBackgroundColor = newValue }
-    }
 
     public init(style: Style, title: String?, handler: @escaping SwipeActionHandler){
         self.style = style
@@ -52,8 +46,8 @@ public class SwipeAction: ContextualAction {
 				}
             }
         }
-        if let color = self.actionBackgroundColor {
-            action.actionBackgroundColor = color
+        if let color = self.backgroundColor {
+            action.backgroundColor = color
         }
         if let image = self.image {
             action.image = image
@@ -61,7 +55,7 @@ public class SwipeAction: ContextualAction {
         return action
     }
 	
-    public enum Style {
+    public enum Style{
         case normal
         case destructive
         
@@ -111,9 +105,16 @@ extension SwipeConfiguration {
 }
 
 protocol ContextualAction {
-    var actionBackgroundColor: UIColor? { get set }
+    var backgroundColor: UIColor? { get set }
     var image: UIImage? { get set }
     var title: String? { get set }
+}
+
+extension ContextualAction {
+    var backgroundColor: UIColor? {
+        get { return nil }
+        set { }
+    }
 }
 
 extension UITableViewRowAction: ContextualAction {
@@ -121,22 +122,10 @@ extension UITableViewRowAction: ContextualAction {
         get { return nil }
         set { return }
     }
-
-    public var actionBackgroundColor: UIColor? {
-        get { return backgroundColor }
-        set { self.backgroundColor = newValue }
-    }
 }
 
 @available(iOS 11.0, *)
-extension UIContextualAction: ContextualAction {
-
-    public var actionBackgroundColor: UIColor? {
-        get { return backgroundColor }
-        set { self.backgroundColor = newValue }
-    }
-
-}
+extension UIContextualAction: ContextualAction {}
 
 public protocol ContextualStyle{}
 extension UITableViewRowAction.Style: ContextualStyle {}

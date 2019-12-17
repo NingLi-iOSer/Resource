@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F9CB1E80DDF86EC7F5349B3B0344326B"
+               BlueprintIdentifier = "D40D2C77E1BFA8F05379ACF0FFB23EBA"
                BuildableName = "Pods_SSFree.framework"
                BlueprintName = "Pods-SSFree"
                ReferencedContainer = "container:Pods.xcodeproj">

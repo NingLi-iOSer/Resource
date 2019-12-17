@@ -1,0 +1,15 @@
+{
+  "commitish" : "v1.1.0",
+  "Mac" : [
+    {
+      "name" : "CommonCrypto",
+      "hash" : "66b88282a748ef054571cf2e96354b2a46d26e08420a71d5c09873d5b2570bc5"
+    }
+  ],
+  "iOS" : [
+    {
+      "name" : "CommonCrypto",
+      "hash" : "5dca4b13c9d6257a45b4f2d2f8ec2c58f70d40d660a1d7653c5dd083b569e072"
+    }
+  ]
+}

@@ -16,9 +16,9 @@ class RowsExampleViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        URLRow.defaultCellUpdate = { cell, row in cell.textField.textColor = .systemBlue }
-        LabelRow.defaultCellUpdate = { cell, row in cell.detailTextLabel?.textColor = .systemOrange  }
-        CheckRow.defaultCellSetup = { cell, row in cell.tintColor = .systemOrange }
+        URLRow.defaultCellUpdate = { cell, row in cell.textField.textColor = .blue }
+        LabelRow.defaultCellUpdate = { cell, row in cell.detailTextLabel?.textColor = .orange  }
+        CheckRow.defaultCellSetup = { cell, row in cell.tintColor = .orange }
         DateRow.defaultRowInitializer = { row in row.minimumDate = Date() }
 
         form +++
@@ -57,10 +57,7 @@ class RowsExampleViewController: FormViewController {
             <<< StepperRow() {
                 $0.title = "StepperRow"
                 $0.value = 1.0
-              }.cellSetup({ (cell, row) in
-                cell.imageView?.image = #imageLiteral(resourceName: "selectedRectangle")
-              })
-          
+            }
 
             +++ Section("SegmentedRow examples")
 

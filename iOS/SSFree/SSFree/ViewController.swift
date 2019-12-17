@@ -8,24 +8,41 @@
 
 import UIKit
 import NetworkExtension
-import Eureka
 import Lottie
 
-class ViewController: FormViewController {
+class ViewController: UIViewController {
     
     let defaultStand = UserDefaults.init(suiteName: "group.test.SSFree")
     
-    let firstSection : Section = Section()
-    
-    var secondSection : Section = Section()
-    
-    var switchRow : SwitchRow = SwitchRow("switchRowTag")
-    
     var status: SSVPNStatus {
-        didSet(o) {
-            updateConnectButton()
+        didSet {
+            switch status {
+            case .connecting:
+                bgLayer.removeAllAnimations()
+                switchImageView.image = #imageLiteral(resourceName: "success")
+            default:
+                bgLayer.removeAllAnimations()
+                switchImageView.image = #imageLiteral(resourceName: "kaiguan")
+            }
+            switchImageView.isUserInteractionEnabled = true
         }
     }
+    
+    /// 渐变
+    private lazy var gradientLayer1 = CAGradientLayer()
+    private lazy var gradientLayer2 = CAGradientLayer()
+    /// 渐变背景
+    private lazy var bgLayer = CALayer()
+    /// 渐变遮罩
+    private lazy var gradientMaskLayer = CAShapeLayer()
+    /// 状态栏样式
+    private var statusBarStyle = UIStatusBarStyle.default
+
+    @IBOutlet weak var topBGViewHeightCons: NSLayoutConstraint!
+    /// 开关
+    @IBOutlet weak var switchImageView: UIImageView!
+    /// 路线信息
+    @IBOutlet weak var routeInfoLabel: UILabel!
     
     required init?(coder: NSCoder) {
         self.status = SSVPNManager.shared.vpnStatus
@@ -39,59 +56,41 @@ class ViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+        setupGradient()
+        
         requestBaidu()
         
-        title = "SSVPN"
-        form +++ firstSection
-            <<< TextRow("IP", { (row) in
-                row.title = "IP"
-                row.placeholder = "Enter server ip here"
-                row.value = self.defaultStand!.string(forKey: SSUserConfig().ip)
-            }).onChange({ (row) in
-                SSVPNManager.shared.ip_address = row.value ?? ""
-                self.defaultStand?.set(row.value, forKey: SSUserConfig().ip)
-            })
-            <<< TextRow("Port", { (row) in
-                row.title = "Port"
-                row.placeholder = "Enter port here"
-                row.value = self.defaultStand!.string(forKey: SSUserConfig().port)
-            }).onChange({ (row) in
-                SSVPNManager.shared.port = Int(row.value ?? "0")!
-                self.defaultStand?.set(row.value ?? "", forKey: SSUserConfig().port)
-            })
-            <<< PasswordRow("Password", { (row) in
-                row.title = "Password"
-                row.placeholder = "Enter password here"
-                row.value = self.defaultStand!.string(forKey: SSUserConfig().password)
-            }).onChange({ (row) in
-                SSVPNManager.shared.password = row.value ?? ""
-                self.defaultStand?.set(row.value, forKey: SSUserConfig().password)
-            })
-            <<< PushRow<String>("Crypto", { (row) in
-                row.title = "Crypto"
-                row.selectorTitle = "Pick crypto algorithm"
-                row.options = ["RC4MD5","SALSA20","CHACHA20","AES128CFB","AES192CFB","AES256CFB"]
-                row.value = self.defaultStand!.string(forKey: SSUserConfig().algorithm)
-            }).onChange({ (row) in
-                SSVPNManager.shared.ip_address = row.value ?? ""
-                self.defaultStand?.set(row.value, forKey: SSUserConfig().algorithm)
-            })
-        +++ secondSection
-            <<< switchRow.onChange({ (row) in
-                if SSVPNManager.shared.vpnStatus == .off && row.value! && !SSVPNManager.shared.ip_address.isEmpty && SSVPNManager.shared.port != 0 && !SSVPNManager.shared.password.isEmpty && !SSVPNManager.shared.algorithm.isEmpty {
-                    SSVPNManager.shared.connect()
-                } else if SSVPNManager.shared.vpnStatus == .on && !row.value! {
-                    SSVPNManager.shared.disconnect()
-                }
-            }).cellSetup({ (cell, row) in
-                if SSVPNManager.shared.vpnStatus == .on {
-                    row.value = true
-                } else {
-                    row.value = false
-                }
-            })
-        
         setupAnimationView()
+    }
+    
+    private func setupUI() {
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: #selector(addRoute))
+    }
+    
+    private func setupGradient() {
+        gradientLayer1.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+        gradientLayer1.locations = [0, 1]
+        gradientLayer2.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+        gradientLayer2.locations = [0 ,1]
+        
+        bgLayer.addSublayer(gradientLayer1)
+        bgLayer.addSublayer(gradientLayer2)
+        
+        switchImageView.superview!.layer.insertSublayer(bgLayer, at: 0)
+        
+        gradientMaskLayer.lineWidth = 1
+        gradientMaskLayer.lineCap = .round
+        gradientMaskLayer.fillColor = UIColor.clear.cgColor
+        gradientMaskLayer.strokeColor = UIColor.white.cgColor
+        let radius: CGFloat = 70
+        let path = UIBezierPath(arcCenter: CGPoint(x: radius, y: radius), radius: radius - 1, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        gradientMaskLayer.path = path.cgPath
+        bgLayer.mask = gradientMaskLayer
     }
     
     private func setupAnimationView() {
@@ -108,42 +107,74 @@ class ViewController: FormViewController {
         view.addSubview(animView)
     }
     
+    override func viewSafeAreaInsetsDidChange() {
+        topBGViewHeightCons.constant = (UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20) + 44
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         status = SSVPNManager.shared.vpnStatus
     }
     
-    private func updateConnectButton() {
-        let ipRow = form.rowBy(tag: "IP")
-        let portRow = form.rowBy(tag: "Port")
-        let passwordRow = form.rowBy(tag: "Password")
-        let cryptoRow = form.rowBy(tag: "Crypto")
-        switch status {
-        case .on:
-            switchRow.value = true
-            ipRow?.disabled = true
-            portRow?.disabled = true
-            passwordRow?.disabled = true
-            cryptoRow?.disabled = true
-        case .off:
-            switchRow.value = false
-            ipRow?.disabled = false
-            portRow?.disabled = false
-            passwordRow?.disabled = false
-            cryptoRow?.disabled = false
-        default:
-            break
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        bgLayer.frame = CGRect(x: (UIScreen.main.bounds.width - 140) * 0.5, y: (UIScreen.main.bounds.width * 0.7 - 140) * 0.5, width: 140, height: 140)
+        gradientLayer1.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: bgLayer.bounds.width * 0.5, height: bgLayer.bounds.height))
+        gradientLayer2.frame = CGRect(origin: CGPoint(x: bgLayer.bounds.width * 0.5, y: 0), size: CGSize(width: bgLayer.bounds.width * 0.5, height: bgLayer.bounds.height))
+        gradientMaskLayer.frame = bgLayer.bounds
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        guard let traitCollection = previousTraitCollection else {
+            return
         }
-        ipRow?.evaluateDisabled()
-        portRow?.evaluateDisabled()
-        passwordRow?.evaluateDisabled()
-        cryptoRow?.evaluateDisabled()
-        switchRow.updateCell()
         
-        SSVPNManager.shared.ip_address = defaultStand?.string(forKey: SSUserConfig().ip) ?? ""
-        SSVPNManager.shared.port = Int(defaultStand?.string(forKey: SSUserConfig().port) ?? "0")!
-        SSVPNManager.shared.password = defaultStand?.string(forKey: SSUserConfig().password) ?? ""
-        SSVPNManager.shared.algorithm = defaultStand?.string(forKey: SSUserConfig().algorithm) ?? ""
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            statusBarStyle = .lightContent
+        default:
+            statusBarStyle = .default
+        }
+        
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    private func updateConnectButton() {
+//        let ipRow = form.rowBy(tag: "IP")
+//        let portRow = form.rowBy(tag: "Port")
+//        let passwordRow = form.rowBy(tag: "Password")
+//        let cryptoRow = form.rowBy(tag: "Crypto")
+//        switch status {
+//        case .on:
+//            switchRow.value = true
+//            ipRow?.disabled = true
+//            portRow?.disabled = true
+//            passwordRow?.disabled = true
+//            cryptoRow?.disabled = true
+//        case .off:
+//            switchRow.value = false
+//            ipRow?.disabled = false
+//            portRow?.disabled = false
+//            passwordRow?.disabled = false
+//            cryptoRow?.disabled = false
+//        default:
+//            break
+//        }
+//        ipRow?.evaluateDisabled()
+//        portRow?.evaluateDisabled()
+//        passwordRow?.evaluateDisabled()
+//        cryptoRow?.evaluateDisabled()
+//        switchRow.updateCell()
+//
+//        SSVPNManager.shared.ip_address = defaultStand?.string(forKey: SSUserConfig().ip) ?? ""
+//        SSVPNManager.shared.port = Int(defaultStand?.string(forKey: SSUserConfig().port) ?? "0")!
+//        SSVPNManager.shared.password = defaultStand?.string(forKey: SSUserConfig().password) ?? ""
+//        SSVPNManager.shared.algorithm = defaultStand?.string(forKey: SSUserConfig().algorithm) ?? ""
     }
     
     private func requestBaidu() {
@@ -151,6 +182,47 @@ class ViewController: FormViewController {
         let request = URLRequest(url: url)
         let session = URLSession.shared
         session.dataTask(with: request).resume()
+    }
+}
+
+// MARK: - 监听事件
+extension ViewController {
+    // 连接 / 断开连接
+    @IBAction private func openOrCloseVPN(_ sender: UITapGestureRecognizer) {
+        switchImageView.isUserInteractionEnabled = false
+        gradientLayer1.colors = [UIColor(white: 1, alpha: 1).cgColor, UIColor(white: 1, alpha: 0.7).cgColor]
+        gradientLayer1.locations = [0.5, 1]
+        
+        gradientLayer2.colors = [UIColor(white: 1, alpha: 0).cgColor, UIColor(white: 1, alpha: 0.7).cgColor]
+        gradientLayer2.locations = [0.1, 1]
+        // 开启动画
+        let anim = CABasicAnimation(keyPath: "transform.rotation.z")
+        anim.fromValue = 0
+        anim.toValue = CGFloat.pi * 2
+        anim.repeatCount = Float.infinity
+        anim.duration = 1.5
+        
+        bgLayer.add(anim, forKey: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.gradientLayer1.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+            self.gradientLayer1.locations = [0, 1]
+            self.gradientLayer2.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+            self.gradientLayer2.locations = [0, 1]
+            self.status = .connecting
+        }
+    }
+    
+    /// 选择路线
+    @IBAction private func chooseRoute() {
+        let vc = SSRouteListController.routeList()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    /// 添加路线
+    @objc private func addRoute() {
+        let vc = SSAddRouteController.addRoute()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

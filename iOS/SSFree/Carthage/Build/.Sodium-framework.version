@@ -1,9 +1,15 @@
 {
   "commitish" : "v1.0.10.1",
+  "Mac" : [
+    {
+      "name" : "Sodium",
+      "hash" : "12542cfa45c66db17ae40fa4500f97e3175ca85014d4507a6ac033ff91189aa1"
+    }
+  ],
   "iOS" : [
     {
       "name" : "Sodium",
-      "hash" : "e7e03761fc8ee6c6362807a75220d908648a2832d4c2bfc4b1ef2be135bcd79f"
+      "hash" : "3845dc8649acbd6a1da4e82dd2553067c1eda6f1944fc9f482cd82f1b69a2154"
     }
   ]
 }

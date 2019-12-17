@@ -72,7 +72,7 @@ public protocol BaseRowType: Taggable {
     /**
      Typically we don't need to explicitly call this method since it is called by Eureka framework. It will validates the row if you invoke it.
      */
-    func validate(quietly: Bool) -> [ValidationError]
+    func validate() -> [ValidationError]
 }
 
 public protocol TypedRowType: BaseRowType {

@@ -2,54 +2,44 @@
 //  ViewController.swift
 //  CustomCamera
 //
-//  Created by Ning Li on 2019/4/16.
-//  Copyright © 2019 Ning Li. All rights reserved.
+//  Created by Ning Li on 2019/12/10.
+//  Copyright © 2019 yzh. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    private var camera: LLSimpleCamera?
+    private var camera: CustomCamera?
+    private var imageCropView: ImageContainerView?
 
-    @IBOutlet weak var navHeightCons: NSLayoutConstraint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.isHidden = true
+        camera = CustomCamera.camera(delegate: self)
         
-        navHeightCons.constant = UIApplication.shared.statusBarFrame.height + 44
-        
-        camera = LLSimpleCamera(quality: AVCaptureSession.Preset.high.rawValue, position: LLCameraPosition.init(0), videoEnabled: false)
-        camera?.attach(to: self, withFrame: view.bounds)
-        camera?.fixOrientationAfterCapture = false
-        camera?.onDeviceChange = { [weak self] (camera, device) in
-            if camera!.isFlashAvailable() {
-                
-            }
-        }
-        
-        camera?.start()
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.insertSubview(camera!, at: 0)
         
     }
-
-    /// 切换前后置
-    @IBAction private func switchCamera() {
-        camera?.togglePosition()
+        
+    private func settingImageCropView(image: UIImage) {
+        imageCropView = ImageContainerView(image: image)
+        view.addSubview(imageCropView!)
     }
     
-    /// 拍照
-    @IBAction func takePhoto(_ sender: Any) {
-        camera?.capture({ (_, image, _, _) in
-            if image != nil {
-                let vc = SearchImageControllerViewController.instance(image: image!)
-                self.present(vc, animated: false, completion: nil)
-            }
-        })
+    @IBAction func takePhoeo(_ sender: Any) {
+//        camera?.takePhoto()
+    }
+}
+
+// MARK: - CustomCameraDelegate
+extension ViewController: CustomCameraDelegate {
+    func camera(_ camera: CustomCamera, takePicture image: UIImage) {
+        settingImageCropView(image: image)
+    }
+    
+    func cameraDidClickBack(_ camera: CustomCamera) {
+        
     }
 }
 
