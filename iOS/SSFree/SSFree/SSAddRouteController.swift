@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import NEKit
 
 class SSAddRouteController: UIViewController {
     
     private lazy var navBar = UINavigationBar(frame: CGRect())
-    private lazy var navItem = UINavigationItem(title: "添加路线")
+    private lazy var navItem = UINavigationItem(title: "添加线路")
     /// 状态栏样式
     private var statusBarStyle = UIStatusBarStyle.default
     /// 加密方式
@@ -55,6 +54,7 @@ class SSAddRouteController: UIViewController {
     }
     
     override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
         let y = UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20
         navBar.frame = CGRect(x: 0, y: y, width: UIScreen.main.bounds.width, height: 44)
         topBGViewHeightCons.constant = (UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20) + 44
@@ -66,6 +66,7 @@ class SSAddRouteController: UIViewController {
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         guard let traitCollection = previousTraitCollection else {
             return
         }

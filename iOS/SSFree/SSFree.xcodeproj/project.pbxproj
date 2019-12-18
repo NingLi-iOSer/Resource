@@ -96,6 +96,8 @@
 		275E3470235DAAB900413056 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275E346E235DAA4400413056 /* NetworkExtension.framework */; };
 		275E34A6235DAF3F00413056 /* SSVPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275E34A5235DAF3F00413056 /* SSVPNManager.swift */; };
 		275E34A8235E891A00413056 /* NEKitRule.conf in Resources */ = {isa = PBXBuildFile; fileRef = 275E34A7235E891A00413056 /* NEKitRule.conf */; };
+		2788D18023A9B0A700AF2091 /* SSRouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788D17E23A9B0A700AF2091 /* SSRouteCell.swift */; };
+		2788D18123A9B0A700AF2091 /* SSRouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2788D17F23A9B0A700AF2091 /* SSRouteCell.xib */; };
 		279CDE5D23A8B7DF005C68EC /* SSRouteListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CDE5C23A8B7DF005C68EC /* SSRouteListController.swift */; };
 		279E01B023A8C28100C7FF3C /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E01AF23A8C28100C7FF3C /* CustomNavigationController.swift */; };
 		279E01B223A8C88700C7FF3C /* EncryptionType.plist in Resources */ = {isa = PBXBuildFile; fileRef = 279E01B123A8C88700C7FF3C /* EncryptionType.plist */; };
@@ -242,6 +244,8 @@
 		275E346E235DAA4400413056 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		275E34A5235DAF3F00413056 /* SSVPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSVPNManager.swift; sourceTree = "<group>"; };
 		275E34A7235E891A00413056 /* NEKitRule.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEKitRule.conf; sourceTree = "<group>"; };
+		2788D17E23A9B0A700AF2091 /* SSRouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSRouteCell.swift; sourceTree = "<group>"; };
+		2788D17F23A9B0A700AF2091 /* SSRouteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSRouteCell.xib; sourceTree = "<group>"; };
 		279CDE5C23A8B7DF005C68EC /* SSRouteListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSRouteListController.swift; sourceTree = "<group>"; };
 		279E01AF23A8C28100C7FF3C /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		279E01B123A8C88700C7FF3C /* EncryptionType.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EncryptionType.plist; sourceTree = "<group>"; };
@@ -369,6 +373,8 @@
 				279E01AF23A8C28100C7FF3C /* CustomNavigationController.swift */,
 				275E344B235DA97600413056 /* ViewController.swift */,
 				279CDE5C23A8B7DF005C68EC /* SSRouteListController.swift */,
+				2788D17E23A9B0A700AF2091 /* SSRouteCell.swift */,
+				2788D17F23A9B0A700AF2091 /* SSRouteCell.xib */,
 				271C8A1123A8BF1D008B7EAD /* SSAddRouteController.swift */,
 				279E01B323A8C8F100C7FF3C /* SSChooseEncryptionTypeController.swift */,
 				27A8046E23A8D08300DE6FED /* SSEncryptionTypeCell.swift */,
@@ -567,6 +573,7 @@
 				275E34A8235E891A00413056 /* NEKitRule.conf in Resources */,
 				27A8047123A8D08300DE6FED /* SSEncryptionTypeCell.xib in Resources */,
 				275E3451235DA97900413056 /* Assets.xcassets in Resources */,
+				2788D18123A9B0A700AF2091 /* SSRouteCell.xib in Resources */,
 				275E344F235DA97600413056 /* Main.storyboard in Resources */,
 				279E01B223A8C88700C7FF3C /* EncryptionType.plist in Resources */,
 			);
@@ -682,6 +689,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				275E344C235DA97600413056 /* ViewController.swift in Sources */,
+				2788D18023A9B0A700AF2091 /* SSRouteCell.swift in Sources */,
 				279E01B423A8C8F100C7FF3C /* SSChooseEncryptionTypeController.swift in Sources */,
 				275E3448235DA97600413056 /* AppDelegate.swift in Sources */,
 				275E34A6235DAF3F00413056 /* SSVPNManager.swift in Sources */,

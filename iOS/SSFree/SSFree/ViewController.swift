@@ -17,14 +17,25 @@ class ViewController: UIViewController {
     var status: SSVPNStatus {
         didSet {
             switch status {
-            case .connecting:
+            case .on:
                 bgLayer.removeAllAnimations()
                 switchImageView.image = #imageLiteral(resourceName: "success")
-            default:
+                gradientLayer1.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+                gradientLayer1.locations = [0, 1]
+                gradientLayer2.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+                gradientLayer2.locations = [0, 1]
+                switchImageView.isUserInteractionEnabled = true
+            case .off:
                 bgLayer.removeAllAnimations()
                 switchImageView.image = #imageLiteral(resourceName: "kaiguan")
+                gradientLayer1.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+                gradientLayer1.locations = [0, 1]
+                gradientLayer2.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+                gradientLayer2.locations = [0, 1]
+                switchImageView.isUserInteractionEnabled = true
+            default:
+                break
             }
-            switchImageView.isUserInteractionEnabled = true
         }
     }
     
@@ -37,6 +48,8 @@ class ViewController: UIViewController {
     private lazy var gradientMaskLayer = CAShapeLayer()
     /// 状态栏样式
     private var statusBarStyle = UIStatusBarStyle.default
+    /// 当前线路
+    private var currentRoute: SSRouteModel?
 
     @IBOutlet weak var topBGViewHeightCons: NSLayoutConstraint!
     /// 开关
@@ -108,6 +121,7 @@ class ViewController: UIViewController {
     }
     
     override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
         topBGViewHeightCons.constant = (UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20) + 44
     }
     
@@ -130,6 +144,7 @@ class ViewController: UIViewController {
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         guard let traitCollection = previousTraitCollection else {
             return
         }
@@ -144,39 +159,6 @@ class ViewController: UIViewController {
         setNeedsStatusBarAppearanceUpdate()
     }
     
-    private func updateConnectButton() {
-//        let ipRow = form.rowBy(tag: "IP")
-//        let portRow = form.rowBy(tag: "Port")
-//        let passwordRow = form.rowBy(tag: "Password")
-//        let cryptoRow = form.rowBy(tag: "Crypto")
-//        switch status {
-//        case .on:
-//            switchRow.value = true
-//            ipRow?.disabled = true
-//            portRow?.disabled = true
-//            passwordRow?.disabled = true
-//            cryptoRow?.disabled = true
-//        case .off:
-//            switchRow.value = false
-//            ipRow?.disabled = false
-//            portRow?.disabled = false
-//            passwordRow?.disabled = false
-//            cryptoRow?.disabled = false
-//        default:
-//            break
-//        }
-//        ipRow?.evaluateDisabled()
-//        portRow?.evaluateDisabled()
-//        passwordRow?.evaluateDisabled()
-//        cryptoRow?.evaluateDisabled()
-//        switchRow.updateCell()
-//
-//        SSVPNManager.shared.ip_address = defaultStand?.string(forKey: SSUserConfig().ip) ?? ""
-//        SSVPNManager.shared.port = Int(defaultStand?.string(forKey: SSUserConfig().port) ?? "0")!
-//        SSVPNManager.shared.password = defaultStand?.string(forKey: SSUserConfig().password) ?? ""
-//        SSVPNManager.shared.algorithm = defaultStand?.string(forKey: SSUserConfig().algorithm) ?? ""
-    }
-    
     private func requestBaidu() {
         let url = URL(string: "https://m.baidu.com")!
         let request = URLRequest(url: url)
@@ -189,7 +171,49 @@ class ViewController: UIViewController {
 extension ViewController {
     // 连接 / 断开连接
     @IBAction private func openOrCloseVPN(_ sender: UITapGestureRecognizer) {
-        switchImageView.isUserInteractionEnabled = false
+        switch status {
+        case .off:
+            if let route = currentRoute {
+                SSVPNManager.shared.ip_address = route.ip_address
+                SSVPNManager.shared.port = route.port
+                SSVPNManager.shared.password = route.password
+                SSVPNManager.shared.algorithm = route.encryptionType
+                SSVPNManager.shared.connect()
+                startAnimation()
+                switchImageView.isUserInteractionEnabled = false
+            }
+            startAnimation()
+        case .on:
+            SSVPNManager.shared.disconnect()
+            switchImageView.isUserInteractionEnabled = false
+            startAnimation()
+        default:
+            break
+        }
+//        gradientLayer1.colors = [UIColor(white: 1, alpha: 1).cgColor, UIColor(white: 1, alpha: 0.7).cgColor]
+//        gradientLayer1.locations = [0.5, 1]
+//
+//        gradientLayer2.colors = [UIColor(white: 1, alpha: 0).cgColor, UIColor(white: 1, alpha: 0.7).cgColor]
+//        gradientLayer2.locations = [0.1, 1]
+//        // 开启动画
+//        let anim = CABasicAnimation(keyPath: "transform.rotation.z")
+//        anim.fromValue = 0
+//        anim.toValue = CGFloat.pi * 2
+//        anim.repeatCount = Float.infinity
+//        anim.duration = 1.5
+//
+//        bgLayer.add(anim, forKey: nil)
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            self.gradientLayer1.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+//            self.gradientLayer1.locations = [0, 1]
+//            self.gradientLayer2.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
+//            self.gradientLayer2.locations = [0, 1]
+//            self.status = .connecting
+//        }
+    }
+    
+    private func startAnimation() {
         gradientLayer1.colors = [UIColor(white: 1, alpha: 1).cgColor, UIColor(white: 1, alpha: 0.7).cgColor]
         gradientLayer1.locations = [0.5, 1]
         
@@ -203,19 +227,14 @@ extension ViewController {
         anim.duration = 1.5
         
         bgLayer.add(anim, forKey: nil)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.gradientLayer1.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
-            self.gradientLayer1.locations = [0, 1]
-            self.gradientLayer2.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
-            self.gradientLayer2.locations = [0, 1]
-            self.status = .connecting
-        }
     }
     
     /// 选择路线
     @IBAction private func chooseRoute() {
-        let vc = SSRouteListController.routeList()
+        let vc = SSRouteListController.routeList(currentRoute: currentRoute) { route in
+            self.currentRoute = route
+            self.routeInfoLabel.text = "\(route.ip_address):\(route.port)"
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
     

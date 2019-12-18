@@ -82,12 +82,14 @@ class SSChooseEncryptionTypeController: UIViewController {
     }
     
     override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
         let y = UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20
         navBar.frame = CGRect(x: 0, y: y, width: UIScreen.main.bounds.width, height: 44)
         topBGViewHeightCons.constant = (UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20) + 44
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         guard let traitCollection = previousTraitCollection else {
             return
         }

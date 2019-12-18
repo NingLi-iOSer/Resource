@@ -12,11 +12,24 @@ import UIKit
 class SSRouteListController: UIViewController {
     
     private lazy var navBar = UINavigationBar(frame: CGRect())
-    private lazy var navItem = UINavigationItem(title: "选择路线")
+    private lazy var navItem = UINavigationItem(title: "选择线路")
+    /// 状态栏样式
+    private var statusBarStyle = UIStatusBarStyle.default
+    /// 线路数据
+    private lazy var routeData = [SSRouteModel]()
+    /// 当前线路
+    private var currentRoute: SSRouteModel?
+    /// 完成回调
+    private var complete: ((_ route: SSRouteModel) -> Void)?
     
-    class func routeList() -> SSRouteListController {
+    @IBOutlet weak var topBGViewHeightCons: NSLayoutConstraint!
+    @IBOutlet weak var mainTableView: UITableView!
+    
+    class func routeList(currentRoute: SSRouteModel?, complete: ((_ route: SSRouteModel) -> Void)?) -> SSRouteListController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(identifier: "RouteList") as! SSRouteListController
+        vc.currentRoute = currentRoute
+        vc.complete = complete
         return vc
     }
 
@@ -28,6 +41,40 @@ class SSRouteListController: UIViewController {
         navBar.shadowImage = UIImage()
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         view.addSubview(navBar)
+        
+        setupTableView()
+        
+        loadRouteData()
+    }
+    
+    private func setupTableView() {
+        mainTableView.contentInset.top = 5
+        mainTableView.rowHeight = 44
+        mainTableView.register(UINib(nibName: "SSRouteCell", bundle: nil), forCellReuseIdentifier: kRouteCellId)
+        mainTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 1))
+    }
+    
+    /// 加载线路数据
+    private func loadRouteData() {
+        let manager = FileManager.default
+        guard let doc = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
+            return
+        }
+        let routeFilePath = "\(doc)/Routes.data"
+        if manager.fileExists(atPath: routeFilePath) {
+            guard let array = NSArray(contentsOfFile: routeFilePath)
+                else {
+                    return
+            }
+            let temp = array.compactMap { try? JSONDecoder().decode(SSRouteModel.self, from: $0 as! Data) }
+            routeData = temp
+            
+            if let route = currentRoute {
+                routeData.forEach { $0.isSelected = ($0.id == route.id) }
+            }
+            
+            mainTableView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,11 +83,56 @@ class SSRouteListController: UIViewController {
     }
     
     override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
         let y = UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20
         navBar.frame = CGRect(x: 0, y: y, width: UIScreen.main.bounds.width, height: 44)
+        topBGViewHeightCons.constant = (UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20) + 44
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard let traitCollection = previousTraitCollection else {
+            return
+        }
+        
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            statusBarStyle = .lightContent
+        default:
+            statusBarStyle = .default
+        }
+        
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return statusBarStyle
     }
     
     @objc private func back() {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
+extension SSRouteListController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return routeData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: kRouteCellId, for: indexPath) as! SSRouteCell
+        cell.set(routeData[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = routeData[indexPath.row]
+        complete?(model)
         navigationController?.popViewController(animated: true)
     }
 }
