@@ -53,8 +53,9 @@ class SSChooseEncryptionTypeController: UIViewController {
     
     private func setupTableView() {
         mainTableView.rowHeight = 44
+        mainTableView.contentInset.top = 5
         mainTableView.register(UINib(nibName: "SSEncryptionTypeCell", bundle: nil), forCellReuseIdentifier: kEncryptionTypeCellId)
-        mainTableView.tableFooterView = UIView()
+        mainTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 1))
     }
     
     /// 加载加密方式数据
@@ -99,6 +100,10 @@ class SSChooseEncryptionTypeController: UIViewController {
         }
         
         setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return statusBarStyle
     }
     
     /// 返回

@@ -87,7 +87,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="Al1-7e-PUX" firstAttribute="leading" secondItem="IhS-M4-TQm" secondAttribute="leading" id="Bks-cC-qGw"/>
                             <constraint firstItem="DP0-kr-gpq" firstAttribute="top" secondItem="j5p-35-7vi" secondAttribute="bottom" id="Cbz-GN-SiP"/>
@@ -145,13 +145,14 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="mL3-iW-TNX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="TitleColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入 IP" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6jC-Tb-C6F">
                                         <rect key="frame" x="90" y="0.0" width="308" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86b-p1-TVa">
@@ -180,17 +181,18 @@
                                 <rect key="frame" x="0.0" y="93" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="端口" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOw-0m-XpH">
-                                        <rect key="frame" x="16" y="11.5" width="33" height="21"/>
+                                        <rect key="frame" x="16" y="11.5" width="31" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Aiq-Nd-MdD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="TitleColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入端口" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wys-y1-anK">
-                                        <rect key="frame" x="109" y="0.0" width="289" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="107" y="0.0" width="291" height="44"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pD7-Ip-HZh">
@@ -219,17 +221,18 @@
                                 <rect key="frame" x="0.0" y="137" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-O9-TJn">
-                                        <rect key="frame" x="16" y="11.5" width="33" height="21"/>
+                                        <rect key="frame" x="16" y="11.5" width="31" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="QSQ-KZ-c1K"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="TitleColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iN1-ne-LRt">
-                                        <rect key="frame" x="109" y="0.0" width="289" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="107" y="0.0" width="291" height="44"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wb8-NT-TTW">
@@ -258,12 +261,12 @@
                                 <rect key="frame" x="0.0" y="181" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加密方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzP-0u-0RC">
-                                        <rect key="frame" x="16" y="11.5" width="66" height="21"/>
+                                        <rect key="frame" x="16" y="11.5" width="61.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="wlg-ED-GMB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="TitleColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JnB-cf-TlY">
@@ -281,8 +284,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="grx-dI-GT4"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -392,8 +395,8 @@
                                     <constraint firstAttribute="height" constant="44" id="iaL-bg-2DM"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aeC-p5-w74">
-                                <rect key="frame" x="0.0" y="49" width="414" height="813"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aeC-p5-w74">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <connections>
                                     <outlet property="dataSource" destination="mVS-mH-zkN" id="sar-cr-4AJ"/>
@@ -404,7 +407,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="fHv-CP-o9k" firstAttribute="leading" secondItem="3e3-QF-X8S" secondAttribute="leading" id="0DK-IH-Gf9"/>
-                            <constraint firstItem="aeC-p5-w74" firstAttribute="top" secondItem="fHv-CP-o9k" secondAttribute="bottom" constant="5" id="GNB-hE-C2u"/>
+                            <constraint firstItem="aeC-p5-w74" firstAttribute="top" secondItem="fHv-CP-o9k" secondAttribute="bottom" id="GNB-hE-C2u"/>
                             <constraint firstItem="H1v-Cz-Mn4" firstAttribute="trailing" secondItem="fHv-CP-o9k" secondAttribute="trailing" id="JEx-kG-dzW"/>
                             <constraint firstItem="fHv-CP-o9k" firstAttribute="top" secondItem="3e3-QF-X8S" secondAttribute="top" id="qIR-Hx-mvL"/>
                             <constraint firstItem="aeC-p5-w74" firstAttribute="leading" secondItem="H1v-Cz-Mn4" secondAttribute="leading" id="r44-In-mKA"/>
@@ -436,6 +439,9 @@
         </namedColor>
         <namedColor name="ThemeColor">
             <color red="0.2627450980392157" green="0.59607843137254901" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

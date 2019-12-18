@@ -60,6 +60,11 @@ class SSAddRouteController: UIViewController {
         topBGViewHeightCons.constant = (UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20) + 44
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         guard let traitCollection = previousTraitCollection else {
             return
@@ -73,6 +78,10 @@ class SSAddRouteController: UIViewController {
         }
         
         setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return statusBarStyle
     }
     
     /// 返回
