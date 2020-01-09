@@ -301,10 +301,58 @@ import Foundation
 //formatter.currencySymbol = "¥"
 //formatter.string(for: price)
 
-let formatter = NumberFormatter()
-formatter.numberStyle = .decimal
-formatter.positiveFormat = "#,###0.5"
-formatter.locale = Locale(identifier: "en-US")
-formatter.string(for: 5324241231234.567) // 1,234.5
-formatter.locale = Locale(identifier: "fr-FR")
-formatter.string(for: 5324241231234.567)
+//let formatter = NumberFormatter()
+//formatter.numberStyle = .decimal
+//formatter.positiveFormat = "#,###0.5"
+//formatter.locale = Locale(identifier: "en-US")
+//formatter.string(for: 5324241231234.567) // 1,234.5
+//formatter.locale = Locale(identifier: "fr-FR")
+//formatter.string(for: 5324241231234.567)
+
+import CryptoKit
+
+//AES.GCM.seal(Data(), using: SymmetricKey(size: .bits256))
+//AES.GCM.open(AES.GCM.SealedBox(combined: Data()), using: SymmetricKey(size: .bits256))
+//ChaChaPoly.seal(Data(), using: SymmetricKey(size: .bits256))
+//ChaChaPoly.open(ChaChaPoly.SealedBox(combined: Data()), using: SymmetricKey(size: .bits256))
+//SHA256.hash(data: Data())
+
+
+//var pwd = "aes-256-gcm:"//"hMLqp9ZYlRam"
+//let data = pwd.data(using: .utf8)
+//var base64 = data!.base64EncodedString()
+//base64.replacingOccurrences(of: "/", with: "_")
+//base64.replacingOccurrences(of: "+", with: "-")
+//Insecure.MD5.hash(data: Data())
+
+func match(pattern: String, in text: String, locationOffset: Int, lengthOffset: Int, isBase64: Bool = false) -> [String] {
+    let regx = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+    guard let result = regx.firstMatch(in: info, options: .reportCompletion, range: NSMakeRange(0, text.count)) else {
+        return []
+    }
+    let content = (info as NSString).substring(with: NSMakeRange(result.range.location + locationOffset, result.range.length + lengthOffset))
+    if isBase64 {
+        let data = Data(base64Encoded: content)
+        let algorithmAndPassword = String(data: data!, encoding: .utf8)!
+        let strings = algorithmAndPassword.components(separatedBy: ":")
+        return strings
+    } else {
+        return [content]
+    }
+}
+
+let info = "YWVzLTI1Ni1nY206aE1McXA5WllsUmFt@65.49.193.149:12345/?#SS"
+
+let passwordPattern = "(.*)@"
+let passwords = match(pattern: passwordPattern, in: info, locationOffset: 0, lengthOffset: -1, isBase64: true)
+let algorithm = passwords[0].uppercased()
+let password = passwords[1]
+
+let hostPattern = "@(.*):"
+let host = match(pattern: hostPattern, in: info, locationOffset: 1, lengthOffset: -2)[0]
+
+let portPattern = ":(.*)/"
+let port = match(pattern: portPattern, in: info, locationOffset: 1, lengthOffset: -2)[0]
+
+let tagPattern = "#(.*)"
+let tag = match(pattern: tagPattern, in: info, locationOffset: 1, lengthOffset: -1)[0]

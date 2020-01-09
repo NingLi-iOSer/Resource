@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NetworkExtension
 
 class ViewController: UIViewController {
     
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
         let doc = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         recordFilePath = doc + "/play.aac"
         manager = RecordManager(path: recordFilePath, delegate: self)
+        
+        _ = NETunnelProvider()
     }
     
     /// 开始录音
